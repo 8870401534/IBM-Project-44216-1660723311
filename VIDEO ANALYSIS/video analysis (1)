@@ -1,0 +1,910 @@
+from google.colab import drive
+drive.mount('/content/drive')
+Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount("/content/drive", force_remount=True).
+!unzip "/content/drive/MyDrive/ibm.zip"
+Archive:  /content/drive/MyDrive/ibm.zip
+  inflating: Dataset/Dataset/test_set/forest/0.48007200_1530881924_final_forest.jpg  
+  inflating: Dataset/Dataset/test_set/forest/0.64133000_1519374442_forest_deep.jpg  
+  inflating: Dataset/Dataset/test_set/forest/0.72918000_1559733279_forests1_gettyimages_.jpg  
+  inflating: Dataset/Dataset/test_set/forest/0.98884800_1554454572_spin.jpg  
+  inflating: Dataset/Dataset/test_set/forest/01_NeilBurnell_Mystical_photoverticall.jpg  
+  inflating: Dataset/Dataset/test_set/forest/091318_LH_forest_loss_main_FREE.jpg  
+  inflating: Dataset/Dataset/test_set/forest/1009821.jpg  
+  inflating: Dataset/Dataset/test_set/forest/111188170_river_in_the_mountain_forest.jpg  
+  inflating: Dataset/Dataset/test_set/forest/1170x500_Ireland_web.jpg  
+  inflating: Dataset/Dataset/test_set/forest/1200px_Mountainarea.jpg  
+  inflating: Dataset/Dataset/test_set/forest/146019.jpg  
+  inflating: Dataset/Dataset/test_set/forest/1506697583544.jpg  
+  inflating: Dataset/Dataset/test_set/forest/1551622076_img_5241.jpg  
+  inflating: Dataset/Dataset/test_set/forest/1551903255_2942.jpg  
+  inflating: Dataset/Dataset/test_set/forest/1556508284pexels_photo_1179229.jpeg  
+  inflating: Dataset/Dataset/test_set/forest/16475617_web1_ForestHealth_VIB_190418_2.jpg  
+  inflating: Dataset/Dataset/test_set/forest/18435324436_6a20e7fc70_k.jpg  
+  inflating: Dataset/Dataset/test_set/forest/1_chimp.jpg  
+  inflating: Dataset/Dataset/test_set/forest/200px_View_of_Lake_Moraine.jpg  
+  inflating: Dataset/Dataset/test_set/forest/2017_10_12_09_01_56.jpg  
+  inflating: Dataset/Dataset/test_set/forest/220px_The_forest_near_Blatets__Vinitsa.JPG  
+  inflating: Dataset/Dataset/test_set/forest/23769_pcbkrdossw_1500310327.jpg  
+  inflating: Dataset/Dataset/test_set/forest/2E215059_55C7_417B_8DDD693AA6E416B4_source.jpg  
+  inflating: Dataset/Dataset/test_set/forest/31105585103_4c32392ac1_k.jpg  
+  inflating: Dataset/Dataset/test_set/forest/381417.jpg  
+  inflating: Dataset/Dataset/test_set/forest/4632581118_dcfb9ed978_b.jpg.860x0_q70_crop_scale.jpg  
+  inflating: Dataset/Dataset/test_set/forest/4fe3f4e45d6bb93070989b8bbb77d30e.jpg  
+  inflating: Dataset/Dataset/test_set/forest/4k_timelapse_heavy_rain_on_mountain_forest_tree_fog_motion_bad_weather_condition_rfift1zh_thumbnail_.png  
+  inflating: Dataset/Dataset/test_set/forest/5325.jpg  
+  inflating: Dataset/Dataset/test_set/forest/5472.jpg  
+  inflating: Dataset/Dataset/test_set/forest/559672101517195076987621071193712n.jpg  
+  inflating: Dataset/Dataset/test_set/forest/78closer_exterior_view_of_northern_Rocky_Mountain_forest.jpg  
+  inflating: Dataset/Dataset/test_set/forest/79806645_landscape_of_tall_grass_field_green_mountain_forest.jpg  
+  inflating: Dataset/Dataset/test_set/forest/7_18_MedicineBowHikingFishing_KL_1319_4003.jpg  
+  inflating: Dataset/Dataset/test_set/forest/7ece9530_9cf1_11e9_bf3c_4fe6e6438142.jpg  
+  inflating: Dataset/Dataset/test_set/forest/852554.jpg  
+  inflating: Dataset/Dataset/test_set/forest/91ErlodmE5L.jpg  
+  inflating: Dataset/Dataset/test_set/forest/91sALlLjdLL.jpg  
+  inflating: Dataset/Dataset/test_set/forest/A003_C014_0724EC.0000000.jpg  
+  inflating: Dataset/Dataset/test_set/forest/Adirondack_Habitats_Mixed_Forest_Barnum_Brook_Trail_Paul_Smiths_VIC_23_May_2012_61.jpg  
+  inflating: Dataset/Dataset/test_set/forest/Adirondack_Habitats_Mixed_Forest_Jenkins_Mountain_Trail_Paul_Smiths_VIC_12_August_2013_71.jpg  
+  inflating: Dataset/Dataset/test_set/forest/Almaty_Mountains.jpg  
+  inflating: Dataset/Dataset/test_set/forest/DSCN8209(1)_250x333.JPG  
+  inflating: Dataset/Dataset/test_set/forest/DSC_0072_Forest.jpg  
+  inflating: Dataset/Dataset/test_set/forest/Deciduous_forest.jpg  
+  inflating: Dataset/Dataset/test_set/forest/Dupont_Forest_Triple_Falls_Rob_Travis_2_1.jpg  
+  inflating: Dataset/Dataset/test_set/forest/Fall_Trees_Alaskan_Adventure_by_John_Simeone.jpg  
+  inflating: Dataset/Dataset/test_set/forest/Fallen_e1499694482182.jpg  
+  inflating: Dataset/Dataset/test_set/forest/_101542074_gettyimages_956391468.jpg  
+  inflating: Dataset/Dataset/test_set/forest/a.jpg  
+  inflating: Dataset/Dataset/test_set/forest/acadia_np_622419_High_Res.jpg  
+  inflating: Dataset/Dataset/test_set/forest/altai_regio_pine_forest_1550x804.jpg  
+  inflating: Dataset/Dataset/test_set/forest/amazing_green_trees_in_dense_mountain_forest_nature_landscape_in_4k_aerial_view_b7oqfwutg_thumbnail_.png  
+  inflating: Dataset/Dataset/test_set/forest/aokigaharaforest_1_star.jpg  
+  inflating: Dataset/Dataset/test_set/forest/appalachian_mtns_forest_usda_srs.jpg  
+  inflating: Dataset/Dataset/test_set/forest/austria_mountain_forest_landscape_wallpaper_1920x1200.jpg  
+  inflating: Dataset/Dataset/test_set/forest/bavarian_forest_3385966_1280_1.jpg  
+  inflating: Dataset/Dataset/test_set/forest/beautiful_green_forest_range_images_picture_photos_wallpaper_download.jpg  
+  inflating: Dataset/Dataset/test_set/forest/beautiful_morning_mountain_forest_scenery_free_stock_photos_picjumbo_DSC02176.jpg  
+  inflating: Dataset/Dataset/test_set/forest/beautiful_mountain_forest_wallpaper_1920x1200.jpg  
+  inflating: Dataset/Dataset/test_set/forest/beech_oak_forest_560.jpg  
+  inflating: Dataset/Dataset/test_set/forest/britishforest_696483208.jpg  
+  inflating: Dataset/Dataset/test_set/forest/canva_waterfalls_in_the_mountain_forest__MADR_l3e0W4.jpg  
+  inflating: Dataset/Dataset/test_set/forest/ce8b73d56bd242eb1f2369fe856f1c63_700.jpg  
+  inflating: Dataset/Dataset/test_set/forest/cold_daylight_environment_1423600_640x427.jpg  
+  inflating: Dataset/Dataset/test_set/forest/easternArc.jpg  
+  inflating: Dataset/Dataset/test_set/forest/em_tiger_mountain_570x284_nc.jpg  
+  inflating: Dataset/Dataset/test_set/forest/europeslostf.jpg  
+  inflating: Dataset/Dataset/test_set/forest/fanas_gregorschmucki_2016_28_1_2600x1733.jpg  
+  inflating: Dataset/Dataset/test_set/forest/fantastic_dark_landscape_of_mountain_forest_in_clouds_fog_or_mist_picture_id688948674.jpg  
+  inflating: Dataset/Dataset/test_set/forest/fb26e4420f3ae3b12788fffdea0fb132_full.jpg  
+  inflating: Dataset/Dataset/test_set/forest/file_20180627_112634_8tdgn4.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/180802_CarrFire_010_large_700x467.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/19464620_401.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/599857.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/Bandipur_fires_2019.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/FORESTFIRE (1).jpg  
+  inflating: Dataset/Dataset/test_set/with fire/Fire_2_696x392.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/Forest_Fire (3).jpg  
+  inflating: Dataset/Dataset/test_set/with fire/Forest_Fire (4).jpg  
+  inflating: Dataset/Dataset/test_set/with fire/Forest_fire_MNRF_esize_IMG_6743.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/GettyImages_482867948.0.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/GettyImages_862092472_1160x773.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/How_to_Protect_Your_Home_From_Forest_Fire_1024x588.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/RED7_May29_1986.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/The_Rim_Fire_in_the_Stanislaus_National_Forest_near_in_California_began_on_Aug._17__2013_0004.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/Untitled_design_161_866x487.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/Uttarakhand_forest_fire.jpeg  
+  inflating: Dataset/Dataset/test_set/with fire/Washington_DNR_Chiwaukum_WildFires_2014_2015_WA_DNR_cropped.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/Wild_fires.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/X80IR0GYSsG6RaiLcsXX.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/b2683a16be44f230a90f50bb944315e994b43042e43df798bb4feaf27e0f8bc8.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/climate_change_forest_fire.jpeg  
+  inflating: Dataset/Dataset/test_set/with fire/cumming_forest_fires.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/deerfire_high_res_edit.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/defense_large.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/f90_fire_1168x657.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/file_20190308_155532_1nvts27.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/forest_fire_0.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/forest_fire_2268729_1280.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/forest_fire_at_bandipur_tiger_reserve_04f0dd5e_3919_11e9_9798_f85edb62de22.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/forestfire.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/forestfire_kApH__621x414_LiveMint.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/growing_risk_future_wildfires_adobestock_199370851.jpeg  
+  inflating: Dataset/Dataset/test_set/with fire/header_hypermaritime_fire.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/horseshoe_bay_fire.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/image.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/in_forestfire1_(1).jpg  
+  inflating: Dataset/Dataset/test_set/with fire/in_forestfires_shutter.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/in_forestfiress_(1).jpg  
+  inflating: Dataset/Dataset/test_set/with fire/korea_forest_fire_4.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/louisiana_forest_fire.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/maxresdefault.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/photo_1555842027_660d9d8df55b.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/ring_of_fire_bailey_colorado_rocky_mountain_forest_wildfire_picture_id157384116.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/rsz_1fire_pix_accumulation_640_1_2.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/shutterstock_48032821.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/shutterstock_710588224.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/skynews_ashdown_forest_fire_4653702.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/uttarakhand_forest_fire_750x500.jpg  
+  inflating: Dataset/Dataset/test_set/with fire/wildfire_header_image_1024x1024.jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (1).gif  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (1).jpeg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (1).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (1).png  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (10).jpeg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (10).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (100).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (101).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (102).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (103).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (104).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (105).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (106).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (107).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (108).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (109).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (11).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (110).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (111).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (112).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (113).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (114).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (115).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (116).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (117).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (118).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (119).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (12).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (120).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (121).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (122).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (123).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (124).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (125).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (126).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (127).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (128).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (129).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (13).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (130).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (131).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (132).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (133).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (134).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (135).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (136).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (137).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (138).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (139).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (14).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (140).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (141).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (142).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (143).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (144).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (145).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (146).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (147).JPG  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (148).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (149).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (15).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (150).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (151).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (152).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (153).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (154).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (155).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (156).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (157).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (158).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (159).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (16).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (160).JPG  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (161).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (162).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (163).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (164).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (165).JPG  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (166).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (167).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (168).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (169).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (17).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (170).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (171).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (172).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (173).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (174).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (175).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (176).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (177).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (178).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (179).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (18).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (180).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (181).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (182).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (183).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (184).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (185).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (186).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (187).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (188).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (189).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (19).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (190).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (191).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (192).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (193).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (194).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (195).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (196).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (197).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (198).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (199).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (2).jpeg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (2).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (2).png  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (20).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (200).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (201).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (202).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (203).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (204).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (205).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (206).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (207).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (208).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (209).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (21).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (210).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (211).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (212).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (213).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (214).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (215).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (216).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (217).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (218).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (219).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (22).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (220).JPG  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (221).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (222).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (223).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (224).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (225).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (226).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (227).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (228).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (229).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (23).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (230).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (231).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (232).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (233).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (234).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (235).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (236).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (237).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (238).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (239).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (24).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (240).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (241).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (242).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (243).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (244).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (245).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (246).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (247).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (248).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (249).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (25).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (250).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (251).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (252).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (253).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (254).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (255).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (256).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (257).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (258).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (259).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (26).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (260).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (261).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (27).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (28).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (29).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (3).jpeg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (3).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (3).png  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (30).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (31).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (32).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (33).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (34).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (35).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (36).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (37).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (38).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (39).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (4).jpeg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (4).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (4).png  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (40).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (41).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (42).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (43).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (44).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (45).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (46).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (47).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (48).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (49).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (5).jpeg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (5).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (5).png  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (50).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (51).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (52).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (53).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (54).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (55).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (56).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (57).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (58).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (59).bmp  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (59).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (6).jpeg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (6).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (6).png  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (60).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (61).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (62).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (63).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (64).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (65).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (66).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (67).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (68).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (69).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (7).jpeg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (7).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (7).png  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (70).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (71).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (72).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (73).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (74).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (75).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (76).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (77).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (78).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (79).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (8).jpeg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (8).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (8).png  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (80).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (81).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (82).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (83).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (84).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (85).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (86).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (87).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (88).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (89).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (9).jpeg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (9).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (9).png  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (90).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (91).JPG  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (92).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (93).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (94).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (95).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (96).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (97).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (98).jpg  
+  inflating: Dataset/Dataset/train_set/forest/with_fire (99).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (1).png  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (10).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (100).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (101).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (102).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (103).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (104).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (105).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (106).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (107).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (108).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (109).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (11).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (110).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (111).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (112).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (113).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (114).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (115).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (116).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (117).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (118).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (119).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (12).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (120).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (121).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (122).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (123).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (124).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (125).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (126).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (127).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (128).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (129).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (13).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (130).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (131).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (132).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (133).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (134).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (135).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (136).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (137).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (138).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (139).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (14).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (140).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (141).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (142).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (143).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (144).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (145).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (146).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (147).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (148).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (149).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (15).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (16).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (17).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (18).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (19).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (2).jpeg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (2).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (2).png  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (20).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (21).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (22).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (23).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (24).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (25).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (26).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (27).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (28).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (29).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (3).jpeg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (3).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (3).png  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (30).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (31).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (32).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (33).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (34).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (35).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (36).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (37).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (38).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (39).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (4).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (4).png  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (40).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (41).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (42).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (43).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (44).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (45).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (46).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (47).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (48).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (49).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (5).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (50).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (51).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (52).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (53).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (54).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (55).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (56).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (57).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (58).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (59).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (6).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (60).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (61).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (62).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (63).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (64).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (65).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (66).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (67).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (68).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (69).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (7).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (70).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (71).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (72).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (73).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (74).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (75).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (76).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (77).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (78).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (79).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (8).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (80).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (81).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (82).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (83).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (84).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (85).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (86).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (87).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (88).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (89).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (9).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (90).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (91).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (92).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (93).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (94).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (95).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (96).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (97).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (98).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire (99).jpg  
+  inflating: Dataset/Dataset/train_set/with fire/with fire.jpeg  
+  inflating: forest1.h5              
+!pip install tensorflow
+!pip install opencv-python
+!pip install opencv-contrib-python
+import tensorflow as tf
+import numpy as np
+from tensorflow import keras
+import os
+import cv2
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.preprocessing import image
+Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: tensorflow in /usr/local/lib/python3.7/dist-packages (2.9.2)
+Requirement already satisfied: six>=1.12.0 in /usr/local/lib/python3.7/dist-packages (from tensorflow) (1.15.0)
+Requirement already satisfied: tensorboard<2.10,>=2.9 in /usr/local/lib/python3.7/dist-packages (from tensorflow) (2.9.1)
+Requirement already satisfied: termcolor>=1.1.0 in /usr/local/lib/python3.7/dist-packages (from tensorflow) (2.0.1)
+Requirement already satisfied: opt-einsum>=2.3.2 in /usr/local/lib/python3.7/dist-packages (from tensorflow) (3.3.0)
+Requirement already satisfied: tensorflow-io-gcs-filesystem>=0.23.1 in /usr/local/lib/python3.7/dist-packages (from tensorflow) (0.27.0)
+Requirement already satisfied: tensorflow-estimator<2.10.0,>=2.9.0rc0 in /usr/local/lib/python3.7/dist-packages (from tensorflow) (2.9.0)
+Requirement already satisfied: google-pasta>=0.1.1 in /usr/local/lib/python3.7/dist-packages (from tensorflow) (0.2.0)
+Requirement already satisfied: astunparse>=1.6.0 in /usr/local/lib/python3.7/dist-packages (from tensorflow) (1.6.3)
+Requirement already satisfied: packaging in /usr/local/lib/python3.7/dist-packages (from tensorflow) (21.3)
+Requirement already satisfied: gast<=0.4.0,>=0.2.1 in /usr/local/lib/python3.7/dist-packages (from tensorflow) (0.4.0)
+Requirement already satisfied: h5py>=2.9.0 in /usr/local/lib/python3.7/dist-packages (from tensorflow) (3.1.0)
+Requirement already satisfied: numpy>=1.20 in /usr/local/lib/python3.7/dist-packages (from tensorflow) (1.21.6)
+Requirement already satisfied: flatbuffers<2,>=1.12 in /usr/local/lib/python3.7/dist-packages (from tensorflow) (1.12)
+Requirement already satisfied: absl-py>=1.0.0 in /usr/local/lib/python3.7/dist-packages (from tensorflow) (1.3.0)
+Requirement already satisfied: keras<2.10.0,>=2.9.0rc0 in /usr/local/lib/python3.7/dist-packages (from tensorflow) (2.9.0)
+Requirement already satisfied: libclang>=13.0.0 in /usr/local/lib/python3.7/dist-packages (from tensorflow) (14.0.6)
+Requirement already satisfied: typing-extensions>=3.6.6 in /usr/local/lib/python3.7/dist-packages (from tensorflow) (4.1.1)
+Requirement already satisfied: setuptools in /usr/local/lib/python3.7/dist-packages (from tensorflow) (57.4.0)
+Requirement already satisfied: grpcio<2.0,>=1.24.3 in /usr/local/lib/python3.7/dist-packages (from tensorflow) (1.50.0)
+Requirement already satisfied: keras-preprocessing>=1.1.1 in /usr/local/lib/python3.7/dist-packages (from tensorflow) (1.1.2)
+Requirement already satisfied: wrapt>=1.11.0 in /usr/local/lib/python3.7/dist-packages (from tensorflow) (1.14.1)
+Requirement already satisfied: protobuf<3.20,>=3.9.2 in /usr/local/lib/python3.7/dist-packages (from tensorflow) (3.17.3)
+Requirement already satisfied: wheel<1.0,>=0.23.0 in /usr/local/lib/python3.7/dist-packages (from astunparse>=1.6.0->tensorflow) (0.37.1)
+Requirement already satisfied: cached-property in /usr/local/lib/python3.7/dist-packages (from h5py>=2.9.0->tensorflow) (1.5.2)
+Requirement already satisfied: google-auth<3,>=1.6.3 in /usr/local/lib/python3.7/dist-packages (from tensorboard<2.10,>=2.9->tensorflow) (1.35.0)
+Requirement already satisfied: google-auth-oauthlib<0.5,>=0.4.1 in /usr/local/lib/python3.7/dist-packages (from tensorboard<2.10,>=2.9->tensorflow) (0.4.6)
+Requirement already satisfied: tensorboard-plugin-wit>=1.6.0 in /usr/local/lib/python3.7/dist-packages (from tensorboard<2.10,>=2.9->tensorflow) (1.8.1)
+Requirement already satisfied: markdown>=2.6.8 in /usr/local/lib/python3.7/dist-packages (from tensorboard<2.10,>=2.9->tensorflow) (3.4.1)
+Requirement already satisfied: requests<3,>=2.21.0 in /usr/local/lib/python3.7/dist-packages (from tensorboard<2.10,>=2.9->tensorflow) (2.23.0)
+Requirement already satisfied: werkzeug>=1.0.1 in /usr/local/lib/python3.7/dist-packages (from tensorboard<2.10,>=2.9->tensorflow) (1.0.1)
+Requirement already satisfied: tensorboard-data-server<0.7.0,>=0.6.0 in /usr/local/lib/python3.7/dist-packages (from tensorboard<2.10,>=2.9->tensorflow) (0.6.1)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in /usr/local/lib/python3.7/dist-packages (from google-auth<3,>=1.6.3->tensorboard<2.10,>=2.9->tensorflow) (0.2.8)
+Requirement already satisfied: rsa<5,>=3.1.4 in /usr/local/lib/python3.7/dist-packages (from google-auth<3,>=1.6.3->tensorboard<2.10,>=2.9->tensorflow) (4.9)
+Requirement already satisfied: cachetools<5.0,>=2.0.0 in /usr/local/lib/python3.7/dist-packages (from google-auth<3,>=1.6.3->tensorboard<2.10,>=2.9->tensorflow) (4.2.4)
+Requirement already satisfied: requests-oauthlib>=0.7.0 in /usr/local/lib/python3.7/dist-packages (from google-auth-oauthlib<0.5,>=0.4.1->tensorboard<2.10,>=2.9->tensorflow) (1.3.1)
+Requirement already satisfied: importlib-metadata>=4.4 in /usr/local/lib/python3.7/dist-packages (from markdown>=2.6.8->tensorboard<2.10,>=2.9->tensorflow) (4.13.0)
+Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.7/dist-packages (from importlib-metadata>=4.4->markdown>=2.6.8->tensorboard<2.10,>=2.9->tensorflow) (3.10.0)
+Requirement already satisfied: pyasn1<0.5.0,>=0.4.6 in /usr/local/lib/python3.7/dist-packages (from pyasn1-modules>=0.2.1->google-auth<3,>=1.6.3->tensorboard<2.10,>=2.9->tensorflow) (0.4.8)
+Requirement already satisfied: idna<3,>=2.5 in /usr/local/lib/python3.7/dist-packages (from requests<3,>=2.21.0->tensorboard<2.10,>=2.9->tensorflow) (2.10)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /usr/local/lib/python3.7/dist-packages (from requests<3,>=2.21.0->tensorboard<2.10,>=2.9->tensorflow) (1.24.3)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.7/dist-packages (from requests<3,>=2.21.0->tensorboard<2.10,>=2.9->tensorflow) (2022.9.24)
+Requirement already satisfied: chardet<4,>=3.0.2 in /usr/local/lib/python3.7/dist-packages (from requests<3,>=2.21.0->tensorboard<2.10,>=2.9->tensorflow) (3.0.4)
+Requirement already satisfied: oauthlib>=3.0.0 in /usr/local/lib/python3.7/dist-packages (from requests-oauthlib>=0.7.0->google-auth-oauthlib<0.5,>=0.4.1->tensorboard<2.10,>=2.9->tensorflow) (3.2.2)
+Requirement already satisfied: pyparsing!=3.0.5,>=2.0.2 in /usr/local/lib/python3.7/dist-packages (from packaging->tensorflow) (3.0.9)
+Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: opencv-python in /usr/local/lib/python3.7/dist-packages (4.6.0.66)
+Requirement already satisfied: numpy>=1.14.5 in /usr/local/lib/python3.7/dist-packages (from opencv-python) (1.21.6)
+Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: opencv-contrib-python in /usr/local/lib/python3.7/dist-packages (4.6.0.66)
+Requirement already satisfied: numpy>=1.14.5 in /usr/local/lib/python3.7/dist-packages (from opencv-contrib-python) (1.21.6)
+train=ImageDataGenerator(rescale=1./255,
+                                 shear_range=0.2,
+                                 rotation_range=180,
+                                 zoom_range=0.2,
+                                 horizontal_flip=True)
+train = ImageDataGenerator(rescale=1/255)
+test = ImageDataGenerator(rescale=1/255)
+train_dataset = train.flow_from_directory("/content/drive/MyDrive/Dataset/Dataset/train_set",
+                                          target_size=(128,128),
+                                          batch_size = 32,
+                                          class_mode = 'binary' )
+Found 436 images belonging to 2 classes.
+test_dataset = test.flow_from_directory("/content/drive/MyDrive/Dataset/Dataset/test_set",
+                                          target_size=(128,128),
+                                          batch_size = 32,
+                                          class_mode = 'binary' )
+Found 121 images belonging to 2 classes.
+test_dataset.class_indices
+{'forest': 0, 'with fire': 1}
+#to define linear initialisation import sequential
+from keras.models import Sequential
+#to add layer import Dense
+from keras.layers import Dense
+#to create convolution kernel import convolution2D
+from keras.layers import Convolution2D
+#import Maxpooling layer
+from keras.layers import MaxPooling2D
+#import flatten layer
+from keras.layers import Flatten
+import warnings
+warnings.filterwarnings('ignore')
+model = keras.Sequential()
+model.add(Convolution2D(32,(3,3),input_shape=(128,128,3),activation='relu'))
+model.add(MaxPooling2D(pool_size=(2,2)))
+model.add(Convolution2D(32,(3,3),activation='relu'))
+model.add(MaxPooling2D(pool_size=(2,2)))
+model.add(Convolution2D(32,(3,3),activation='relu'))
+model.add(MaxPooling2D(pool_size=(2,2)))
+model.add(Convolution2D(32,(3,3),activation='relu'))
+model.add(MaxPooling2D(pool_size=(2,2)))
+model.add(Flatten())
+model.add(Dense(150,activation='relu'))
+
+model.add(Dense(1,activation='sigmoid'))
+model.compile(loss = 'binary_crossentropy',
+              optimizer = "adam",
+              metrics = ["accuracy"])
+r = model.fit(train_dataset, epochs = 5, validation_data = test_dataset)
+Epoch 1/5
+14/14 [==============================] - 146s 10s/step - loss: 0.5411 - accuracy: 0.7362 - val_loss: 0.2099 - val_accuracy: 0.9504
+Epoch 2/5
+14/14 [==============================] - 25s 2s/step - loss: 0.2775 - accuracy: 0.8807 - val_loss: 0.2187 - val_accuracy: 0.8926
+Epoch 3/5
+14/14 [==============================] - 25s 2s/step - loss: 0.2991 - accuracy: 0.8532 - val_loss: 0.2396 - val_accuracy: 0.9256
+Epoch 4/5
+14/14 [==============================] - 25s 2s/step - loss: 0.2643 - accuracy: 0.8899 - val_loss: 0.0606 - val_accuracy: 0.9835
+Epoch 5/5
+14/14 [==============================] - 25s 2s/step - loss: 0.1849 - accuracy: 0.9243 - val_loss: 0.0536 - val_accuracy: 0.9917
+predictions = model.predict(test_dataset)
+predictions = np.round(predictions)
+4/4 [==============================] - 5s 1s/step
+predictions
+array([[1.],
+       [1.],
+       [1.],
+       [0.],
+       [0.],
+       [0.],
+       [1.],
+       [1.],
+       [0.],
+       [1.],
+       [0.],
+       [1.],
+       [1.],
+       [0.],
+       [0.],
+       [1.],
+       [0.],
+       [0.],
+       [0.],
+       [0.],
+       [1.],
+       [1.],
+       [0.],
+       [0.],
+       [1.],
+       [1.],
+       [1.],
+       [0.],
+       [0.],
+       [0.],
+       [0.],
+       [0.],
+       [0.],
+       [1.],
+       [0.],
+       [0.],
+       [0.],
+       [1.],
+       [1.],
+       [0.],
+       [0.],
+       [1.],
+       [0.],
+       [0.],
+       [1.],
+       [0.],
+       [0.],
+       [1.],
+       [0.],
+       [1.],
+       [0.],
+       [0.],
+       [0.],
+       [0.],
+       [0.],
+       [1.],
+       [0.],
+       [0.],
+       [0.],
+       [0.],
+       [1.],
+       [0.],
+       [1.],
+       [0.],
+       [1.],
+       [1.],
+       [0.],
+       [0.],
+       [0.],
+       [0.],
+       [0.],
+       [0.],
+       [1.],
+       [0.],
+       [1.],
+       [0.],
+       [1.],
+       [0.],
+       [0.],
+       [1.],
+       [0.],
+       [0.],
+       [0.],
+       [0.],
+       [0.],
+       [1.],
+       [1.],
+       [0.],
+       [0.],
+       [0.],
+       [0.],
+       [1.],
+       [0.],
+       [1.],
+       [1.],
+       [1.],
+       [0.],
+       [0.],
+       [1.],
+       [1.],
+       [1.],
+       [1.],
+       [1.],
+       [1.],
+       [1.],
+       [1.],
+       [1.],
+       [1.],
+       [1.],
+       [1.],
+       [0.],
+       [0.],
+       [1.],
+       [0.],
+       [1.],
+       [0.],
+       [0.],
+       [0.],
+       [0.],
+       [0.],
+       [0.]], dtype=float32)
+print(len(predictions))
+121
+model.save("/content/drive/MyDrive/archive (1)/forest1.h5")
+#import load_model from keras.model
+from keras.models import load_model
+#import image class from keras
+import tensorflow as tf
+from tensorflow.keras.preprocessing import image
+#import numpy
+import numpy as np
+#import cv2
+import cv2
+model = load_model("/content/drive/MyDrive/archive (1)/forest1.h5")
+def predictImage(filename):
+  img1 = image.load_img(filename,target_size=(128,128))
+  Y = image.img_to_array(img1)
+  X = np.expand_dims(Y,axis=0)
+  val = model.predict(X)
+  print(val)
+  if val == 1:
+    print(" fire")
+  elif val == 0:
+      print("no fire")
+predictImage("/content/drive/MyDrive/archive (1)/Dataset/Dataset/test_set/with fire/Forest_Fire (3).jpg")
+1/1 [==============================] - 0s 96ms/step
+[[1.]]
+ fire
+pip install twilio
+Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Collecting twilio
+  Downloading twilio-7.15.1-py2.py3-none-any.whl (1.4 MB)
+     |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 1.4 MB 9.6 MB/s 
+Collecting PyJWT<3.0.0,>=2.0.0
+  Downloading PyJWT-2.6.0-py3-none-any.whl (20 kB)
+Requirement already satisfied: requests>=2.0.0 in /usr/local/lib/python3.7/dist-packages (from twilio) (2.23.0)
+Requirement already satisfied: pytz in /usr/local/lib/python3.7/dist-packages (from twilio) (2022.5)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.7/dist-packages (from requests>=2.0.0->twilio) (2022.9.24)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /usr/local/lib/python3.7/dist-packages (from requests>=2.0.0->twilio) (1.24.3)
+Requirement already satisfied: chardet<4,>=3.0.2 in /usr/local/lib/python3.7/dist-packages (from requests>=2.0.0->twilio) (3.0.4)
+Requirement already satisfied: idna<3,>=2.5 in /usr/local/lib/python3.7/dist-packages (from requests>=2.0.0->twilio) (2.10)
+Installing collected packages: PyJWT, twilio
+Successfully installed PyJWT-2.6.0 twilio-7.15.1
+pip install playsound
+Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Collecting playsound
+  Downloading playsound-1.3.0.tar.gz (7.7 kB)
+Building wheels for collected packages: playsound
+  Building wheel for playsound (setup.py) ... done
+  Created wheel for playsound: filename=playsound-1.3.0-py3-none-any.whl size=7035 sha256=58c730885ef477f0bdfa405c910ad06d569eecb53e6f36465f325ce0a120aa92
+  Stored in directory: /root/.cache/pip/wheels/ba/f8/bb/ea57c0146b664dca3a0ada4199b0ecb5f9dfcb7b7e22b65ba2
+Successfully built playsound
+Installing collected packages: playsound
+Successfully installed playsound-1.3.0
+#import opencv librariy
+import cv2
+#import numpy
+import numpy as np
+#import image function from keras
+from keras.preprocessing import image
+#import load_model from keras
+from keras.models import load_model
+#import client from twilio API
+from twilio.rest import Client
+#imort playsound package
+from playsound import playsound
+WARNING:playsound:playsound is relying on another python subprocess. Please use `pip install pygobject` if you want playsound to run more efficiently.
+#load the saved model
+model = load_model(r'/content/drive/MyDrive/archive (1)/forest1.h5')
+#define video
+video = cv2.VideoCapture('/content/Fighting Fire with Fire _ Explained in 30 Seconds.mp4')
+#define the features
+name = ['forest','with forest']
+account_sid = 'AC9e15eae056ba54ebe61e3ed93d4f2658'
+auth_token = 'a049c8a7500762182c3fa47a9fa239f7'
+client = Client(account_sid, auth_token)
+
+message = client.messages \
+    .create(
+         body='Forest fire is detected , stay alert',
+         from_='+19472104724',
+         to='+919361221241'
+     )
+
+print(message.sid)
+SM98f0e902a5dbacc0a2c578b2fde3a14c
+#import opencv library
+import cv2
+#import numpy
+import numpy as np
+#import images and load_model function from keras
+from keras_preprocessing import image
+from keras.models import load_model
+#import client from twilio API
+from  twilio.rest import Client
+#import playsound package
+from playsound import playsound
+
+#load the saved model
+model = load_model(r'/content/drive/MyDrive/archive (1)/forest1.h5')
+video = cv2.VideoCapture('/content/Fighting Fire with Fire _ Explained in 30 Seconds.mp4')
+name = ['forest','with fire']
